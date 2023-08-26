@@ -38,7 +38,7 @@ $(".btn").click(function () {                                   //eventlistener 
 
 
 function playSound(name) {                                         //funkce na prehrani zvuku
-    var audio = new Audio('/sounds/' + name + ".mp3");
+    var audio = new Audio('sounds/' + name + ".mp3");
     audio.play();
 }
 
@@ -60,13 +60,13 @@ function checkAnswer(currentLevel) {                                            
         }
     }
     else {
-        var audio = new Audio('/sounds/wrong.mp3');                     //prehrani audia wrong
+        var audio = new Audio('sounds/wrong.mp3');                     //prehrani audia wrong
         audio.play();
         $("body").addClass("game-over");                                //fce na pridani classy game over
         setTimeout(function () {
             $("body").removeClass("game-over");                         //fce na odebrani classy
         }, 200);
-        $("h1").text("Game Over, Press Any Key to Restart");              //zmena H1
+        $("h1").text("Game Over, Press Any Key to Restart");            //zmena h1
         startOver();                                                    //trigger funkce na reset hodnot
     }
 
